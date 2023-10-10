@@ -9,6 +9,8 @@ import dotenv from "dotenv";
 // require('dotenv').config();
 dotenv.config();
 const playwrightReportFolder = process.env.PLAYWRIGHT_REPORT_FOLDER || "report";
+const playwrightSummaryReportFileName =
+  process.env.PLAYWRIGHT_SUMMARY_REPORT_FILE_NAME || "summary.json";
 const playwrightOutputFolder =
   process.env.PLAYWRIGHT_OUTPUT_FOLDER || "artifacts";
 const reportFolder = `${playwrightReportFolder}/report-${moment().format(
@@ -38,7 +40,7 @@ export default defineConfig({
       "playwright-summary-reporter",
       {
         outputFolder: reportFolder,
-        name: "summary.json",
+        name: playwrightSummaryReportFileName,
         testMatch: /.*\.spec\.ts/,
       },
     ],
