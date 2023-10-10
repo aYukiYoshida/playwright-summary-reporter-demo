@@ -1,6 +1,6 @@
 {
   "name": "playwright-summary-reporter-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DEMO of playwright-summary-reporter",
   "devDependencies": {
     "@playwright/test": "^1.38.1",
